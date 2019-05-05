@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
-import { View ,Text,TouchableOpacity,StatusBar,ScrollView,Image,StyleSheet} from 'react-native';
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import Icon2 from "react-native-vector-icons/MaterialIcons";
-import Icon3 from "react-native-vector-icons/Feather";
-import Icon4 from "react-native-vector-icons/FontAwesome";
-import Icon5 from "react-native-vector-icons/Entypo";
-
+import React from 'react';
+import { View ,Text,TouchableOpacity,StatusBar,Image,StyleSheet} from 'react-native';
 
 export default  class Home extends React.Component {
  render() {
     return (
       <View style={{ flex: 1,}}>
+      
         <StatusBar barStyle="light-content" backgroundColor="#4fbc95" />
         <View style={[styles.sub_Header]}>
           <Text style={[styles.subHeaderText]}>Max's Recipes</Text>

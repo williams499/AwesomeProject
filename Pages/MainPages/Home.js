@@ -1,15 +1,32 @@
 import React, { Component } from 'react';
-import { View ,Text,TouchableOpacity,StatusBar,ScrollView,Image,StyleSheet} from 'react-native';
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { View ,Text,TouchableOpacity,Platform,StatusBar,ScrollView,Image,StyleSheet} from 'react-native';
+// import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon2 from "react-native-vector-icons/MaterialIcons";
 import Icon3 from "react-native-vector-icons/Feather";
 import Icon4 from "react-native-vector-icons/FontAwesome";
 import Icon5 from "react-native-vector-icons/Entypo";
+import { Header, Avatar, Icon } from 'react-native-elements';
+
 
 export default  class Home extends React.Component {
+  _navigateBack = () => {
+    this.props.navigation.goBack(null);
+  };
+
  render() {
     return (
       <View style={{ flex: 1,}}>
+      <Header
+          innerContainerStyles={{flexDirection: 'row',}}
+          backgroundColor='#4fbc95'
+          // outerContainerStyles={{justifyContent:'center',alignItems:'center'}}
+          containerStyle={{height: Platform.OS === 'ios' ? 70 : 60,borderBottomColor:'transparent'}}
+          leftComponent={<Icon containerStyle={{top: -10,}}  onPress={this._navigateBack} name={'keyboard-arrow-left'} color={'#fff'} size={40}/>}
+          centerComponent={ <View style={{alignItems: 'center',bottom:10}}>
+                              <Text style={{justifyContent: 'center', color: '#fff', alignContent:'center',fontSize:22,}}>Petcy</Text>
+                            </View>}
+          rightComponent={<Icon   containerStyle={{top: -10,}} name={'menu'}  color={'#fff'} />}
+        />
         <StatusBar barStyle="light-content" backgroundColor="#4fbc95" />
         <View style={[styles.sub_Header]}>
           <Text style={[styles.subHeaderText]}>Pick a provider</Text>

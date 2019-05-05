@@ -1,12 +1,18 @@
 import {createStackNavigator,createAppContainer} from 'react-navigation';
 import Home from '../MainPages/Home';
-import Details from '../MainPages/Detail';
-
+import Detail from '../MainPages/Detail';
+import Navi from '../MainPages/Navi';
 // import StackViewStyleInterpolator from "react-navigation-stack/dist/views/StackView/StackViewStyleInterpolator";
 
 const AppStackNavigator = createStackNavigator({
-  Details: {
-    screen: Details,
+  Navi: {
+    screen: Navi,
+    navigationOptions: {
+      header: null,
+    }
+  }, 
+  Detail: {
+    screen: Detail,
     navigationOptions: {
       header: null,
     }

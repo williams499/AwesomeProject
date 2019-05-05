@@ -6,7 +6,6 @@ import Icon3 from "react-native-vector-icons/Feather";
 import Icon4 from "react-native-vector-icons/FontAwesome";
 import Icon5 from "react-native-vector-icons/Entypo";
 
-
 export default  class Home extends React.Component {
  render() {
     return (

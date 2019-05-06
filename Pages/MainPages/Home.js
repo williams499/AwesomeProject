@@ -7,7 +7,6 @@ import Icon4 from "react-native-vector-icons/FontAwesome";
 import Icon5 from "react-native-vector-icons/Entypo";
 import { Header, Avatar, Icon } from 'react-native-elements';
 
-
 export default  class Home extends React.Component {
   _navigateBack = () => {
     this.props.navigation.goBack(null);
@@ -185,10 +184,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#f7f7f7",
     zIndex: 9999
   },
-  marginHor:{marginHorizontal:20},
-  bold:{fontWeight:'500'},
-
-
+  marginHor:
+  {
+  marginHorizontal:20
+  },
+  bold:
+  {
+  fontWeight:'500'
+  },
   sub_Header:{
     height:50,
     backgroundColor:'#4FBC95',
@@ -217,8 +220,6 @@ const styles = StyleSheet.create({
     fontSize:16,
     marginRight:35
   },
-
-
   bodyStyles:{
     
   },
@@ -265,11 +266,11 @@ const styles = StyleSheet.create({
   white:{
     color:'white'
   },
-
   footer:{
 
   },
   borderSty:{
-    borderBottomWidth:1,borderBottomColor:'#4fbc95'
+    borderBottomWidth:1,
+    borderBottomColor:'#4fbc95'
   }
 });
